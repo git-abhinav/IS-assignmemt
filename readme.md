@@ -1,8 +1,9 @@
 ---
 output:
   html_document: default
-  word_document: default
+  author: Abhinav Kumar
   pdf_document: default
+  output: default 
 ---
 # READ ME file for DUCS &copy; Anti-Virus Version 1.00000001
 
