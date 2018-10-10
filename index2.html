@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--<meta name="viewport" content="width=500, initial-scale=1">-->
+<style>
+.grid-container {
+  display: grid;
+  grid-column-gap: minmax(1px, 1px);
+  /*max-grid-column-gap: 10px;*/
+  grid-template-columns: auto auto auto auto auto auto auto auto auto ;
+  background-color: black;
+  padding: 2px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 1);
+  padding: 18px;
+  font-size: 30px;
+
+  max-width: 50px;
+  
+  min-width: 40px;
+  min-height: 50px;
+
+  max-height: 50px;
+  
+  min-height: 40px;
+  text-align: center;
+
+}
+body
+{
+   background-color: #eee;
+   max-width: 800px;
+   max-height: 800px
+   min-height: 800px;
+   min-width: 800px;
+   font-family: Ubuntu Mono,Monaco;
+   text-align: center;
+}
+html, body {
+    /*height: 100%;*/
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    /*display: table-cell;*/
+    vertical-align: middle;
+}
+
+
+
+.button {
+  font-family: Ubuntu Mono,Monaco;
+  border-radius: 5px;
+  background-color: black;
+  border: none;
+  color: #eee;
+  max-width: 150px;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.7s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+br
+{
+  height: 10px;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -50px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 30px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+input
+{
+  border: none
+
+}
+</style>
+
+
+<script>
+function myFunction(myvar) {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "hidden");
+    document.body.appendChild(x);
+    var v = prompt("Enter");
+    var theId = myvar.id;
+    if(v<=9 && v>=0)
+    {
+      document.getElementById(theId).innerHTML = v;
+      document.getElementById(theId).style.color = "blue";
+    }
+    else 
+      alert("Please enter number between 1 to 9")
+
+
+    //to give each cell a value 
+    //for(var i=1;i<=81;++i) 
+       // document.getElementById(i).innerHTML = i ;
+    //for (var i=1;i<=81;++i)
+     // if (i%2 == 0)
+        //document.getElementById(i).style.color = "red"; 
+}
+</script>
+
+
+
+
+
+
+</head>
+<body>
+
+  <center>
+    <h1>
+      Sudoku
+    </h1>
+  </center>
+  
+  <hr>
+  
+  <div class="grid-container">
+    <div id="1" onclick="myFunction(this)" class="grid-item"> </div>
+    <div id="2" onclick="myFunction(this)" class="grid-item"> </div>
+    <div id="3" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="4" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="5" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="6" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="7" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="8" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="9" onclick="myFunction(this)" class="grid-item"></div>
+    
+    <div id="10" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="11" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="12" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="13" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="14" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="15" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="16" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="17" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="18" onclick="myFunction(this)" class="grid-item"></div>
+    
+    <div id="19" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="20" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="21" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="22" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="23" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="24" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="25" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="26" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="27" onclick="myFunction(this)" class="grid-item"></div>
+    
+    <div id="28" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="29" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="30" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="31" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="32" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="33" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="34" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="35" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="36" onclick="myFunction(this)" class="grid-item"></div>
+    
+    <div id="37" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="38" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="39" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="40" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="41" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="42" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="43" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="44" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="45" onclick="myFunction(this)" class="grid-item"></div>
+    
+    <div id="46" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="47" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="48" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="49" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="50" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="51" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="52" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="53" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="54" onclick="myFunction(this)" class="grid-item"></div>
+    
+    <div id="55" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="56" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="57" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="58" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="59" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="60" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="61" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="62" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="63" onclick="myFunction(this)" class="grid-item"></div>
+      
+    <div id="64" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="65" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="66" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="67" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="68" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="69" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="70" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="71" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="72" onclick="myFunction(this)" class="grid-item"></div>
+
+
+    <div id="73" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="74" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="75" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="76" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="77" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="78" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="79" onclick="myFunction(this)" class="grid-item"></div>  
+    <div id="80" onclick="myFunction(this)" class="grid-item"></div>
+    <div id="81" onclick="myFunction(this)" class="grid-item"></div>
+  
+  </div>
+
+  <br>
+
+  <script>
+function clicked()
+{
+  alert("Button pressed")
+
+  for(var i = 0; i<5; ++i)
+  {
+    var x = console.log("Enter : ")
+    console.log(x)
+  }
+}
+</script>
+
+<button class="button" onclick = "clicked()">
+  <span>
+    Start
+  </span>
+</button>
+
+
+
+
+
+</body>
+</html>
